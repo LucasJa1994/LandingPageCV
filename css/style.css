@@ -231,6 +231,66 @@ article {
   color: #ffffff;
 }
 
+/* Estilo para o <aside> - Informações Extras */
+aside {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+aside h2 {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: center;
+}
+
+aside ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+aside ul li {
+  margin-bottom: 12px;
+  font-size: 1.05em;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+aside ul li ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+aside ul li a {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+aside ul li a:hover {
+  color: #6ba8f0;
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  aside {
+    padding: 15px;
+  }
+
+  aside h2 {
+    font-size: 1.3em;
+  }
+
+  aside ul li {
+    font-size: 1em;
+  }
+}
+
 /* Rodapé */
 footer {
   text-align: center;
