@@ -22,7 +22,6 @@ header {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  height: 700px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -42,6 +41,8 @@ header img {
   border-radius: 10%;
   border: 4px solid white;
   max-width: 200px;
+  width: 100%;
+  height: auto;
 }
 
 nav {
@@ -58,6 +59,7 @@ nav ul {
   justify-content: center;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap; /* permite quebrar em telas pequenas */
 }
 
 nav li {
@@ -84,7 +86,7 @@ section {
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 700px;
+  min-height: 700px; /* mudou de height fixo para min-height */
   color: #ffffff; /* Texto branco */
 }
 
@@ -99,11 +101,13 @@ section {
   margin-bottom: 15px;
   color: #ffffff;
 }
-article{
+
+article {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 #sobre p {
   font-size: 1.1em;
   line-height: 1.6;
@@ -148,24 +152,25 @@ article{
   color: #ffffff;
 }
 
-/* Container principal (700px de largura máxima) */
+/* Container principal */
 .projetos-container {
   max-width: 700px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/* Lista de projetos (flexível, itens lado a lado) */
+/* Lista de projetos */
 .lista-projetos {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* permite quebrar em telas pequenas */
+  justify-content: center; /* centraliza quando quebra linha */
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Cada projeto (ajustável dentro do container) */
+/* Cada projeto */
 .projeto {
   max-width: 300px;
   width: 100%;
@@ -183,7 +188,7 @@ article{
   transition: transform 0.3s ease;
 }
 
-/* Efeito hover (opcional) */
+/* Efeito hover */
 .projeto:hover img {
   transform: scale(1.05);
 }
@@ -244,4 +249,51 @@ a {
 a:hover {
   text-decoration: none;
   color: #6ba8f0;
+}
+
+/* Imagens gerais */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 900px) {
+  body {
+    padding: 15px;
+  }
+  .projetos-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lista-projetos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projeto {
+    max-width: 90%;
+  }
+
+  header img {
+    max-width: 120px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  section {
+    padding: 15px;
+    min-height: auto; /* deixa altura automática em telas pequenas */
+  }
 }
