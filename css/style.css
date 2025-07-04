@@ -1,0 +1,247 @@
+/* Reset e estrutura geral */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a; /* Fundo mais escuro */
+  color: #ffffff; /* Texto branco */
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #2d2d2d; /* Tom mais claro que o fundo */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+header figure {
+  margin-top: 15px;
+}
+
+header img {
+  border-radius: 10%;
+  border: 4px solid white;
+  max-width: 200px;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: rgb(240, 130, 5);
+}
+
+/* Seções Gerais */
+section {
+  background-color: #2d2d2d; /* Tom mais claro que o fundo */
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 700px;
+  color: #ffffff; /* Texto branco */
+}
+
+/* Sobre */
+#sobre {
+  background-color: #2d2d2d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#sobre h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#sobre p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Habilidades */
+#habilidades {
+  background-color: #2d2d2d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#habilidades h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+#habilidades p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+#habilidades ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#habilidades li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+#habilidades li strong {
+  color: #ffffff;
+}
+
+.projetos h1 {
+  color: #ffffff;
+}
+
+/* Container principal (700px de largura máxima) */
+.projetos-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Lista de projetos (flexível, itens lado a lado) */
+.lista-projetos {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada projeto (ajustável dentro do container) */
+.projeto {
+  max-width: 300px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Imagens responsivas */
+.projeto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Efeito hover (opcional) */
+.projeto:hover img {
+  transform: scale(1.05);
+}
+
+/* Legenda */
+.projeto figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.project-description {
+  display: block;
+  max-width: 600px;
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.project-description strong {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.project-description ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.project-description li {
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.project-description em {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #6ba8f0;
+}
