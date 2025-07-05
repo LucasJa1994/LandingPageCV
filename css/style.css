@@ -43,18 +43,21 @@ header img {
   max-width: 200px;
   width: 100%;
   height: auto;
-}.social-links {
+}
+.social-links {
   display: flex;
   gap: 16px;
   justify-content: center;
   list-style: none;
   padding: 20px 0;
+  
 }
 
 .social-links li a {
   color: white;
   font-size: 2rem;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .social-links li a:hover {
