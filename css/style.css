@@ -358,30 +358,27 @@ img {
   }
 }
 
-
-.social-fixed {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-}
-
 .social-links {
   display: flex;
-  flex-direction: column;
   gap: 16px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+  list-style: none; /* Adicionei isso pois seus links estão dentro de uma ul */
 }
 
-.social-links li a {
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
   color: white;
-  font-size: 2rem;
-  transition: color 0.3s ease;
-  text-decoration: none;
+  background: #333;
 }
 
-.social-links li a:hover {
-  color: #f08205;
+.social-links a:hover {
+  background: #f08205; /* Cor laranja similar ao hover dos links do menu */
+  transform: scale(1.1);
 }
