@@ -364,7 +364,7 @@ img {
   padding: 24px 0;
   font-size: 24px;
   justify-content: center;
-  list-style: none; /* Adicionei isso pois seus links estão dentro de uma ul */
+  list-style: none; 
 }
 
 .social-links a {
@@ -379,14 +379,13 @@ img {
 }
 
 .social-links a:hover {
-  background: #f08205; /* Cor laranja similar ao hover dos links do menu */
+  background: #f08205; 
   transform: scale(1.1);
 }
 
 .voltar{
     display: flex;
     justify-content: right;
-
 }
 
 .voltar a {
@@ -401,6 +400,6 @@ img {
 }
 
 .voltar a:hover {
-  background: #f08205; /* Cor laranja similar ao hover dos links do menu */
+  background: #f08205; 
   transform: scale(1.1);
 }
