@@ -381,29 +381,34 @@ img {
 .social-links a:hover {
   background: #f08205; 
   transform: scale(1.1);
-}
-
-.voltar{
-    display: flex;
-    justify-content: right;
+}.voltar {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .voltar a {
-  display: flex;
-  align-items: end;
-  justify-content: right;
-  padding: 15px;
-  transition: background 0.2s;
+  position: relative;
+  display: inline-block;
   width: 0;
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 80px;
+  border-bottom: 80px solid #333; /* cria o triângulo apontando para cima */
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.voltar a::after {
+  content: "↑"; /* ou use "\2191" (unicode de seta para cima) */
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  background: #333;
+  font-size: 20px;
 }
 
 .voltar a:hover {
-  background: #f08205; 
+  border-bottom-color: #f08205;
   transform: scale(1.1);
 }
