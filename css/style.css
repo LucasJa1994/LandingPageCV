@@ -382,3 +382,9 @@ img {
   background: #f08205; /* Cor laranja similar ao hover dos links do menu */
   transform: scale(1.1);
 }
+
+.voltar{
+    display: flex;
+    justify-content: right;
+
+}
