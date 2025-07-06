@@ -43,25 +43,37 @@ header img {
   max-width: 200px;
   width: 100%;
   height: auto;
-}
-.social-links {
+}.header-content {
   display: flex;
-  gap: 16px;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-links {
+  flex-direction: column; /* Alinhar em coluna */
+  align-items: flex-end;  /* Alinha à direita */
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
   list-style: none;
-  padding: 20px 0;
-  
 }
 
 .social-links li a {
-  color: white;
   font-size: 2rem;
-  transition: background 0.3s ease;
-  text-decoration: none;
-}
-
-.social-links li a:hover {
-  color: #f08205; /* Cor de destaque no hover */
+  color: white;
+  transition: color 0.3s ease;
 }
 
 nav {
