@@ -7,8 +7,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #1a1a1a; /* Fundo mais escuro */
+  color: #ffffff; /* Texto branco */
   line-height: 1.6;
   max-width: 1200px;
   margin: auto;
@@ -17,13 +17,15 @@ body {
 
 /* Cabeçalho */
 header {
-  position: relative;
-  background-color: #2d2d2d;
+  background-color: #2d2d2d; /* Tom mais claro que o fundo */
   color: white;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header h1 {
@@ -41,16 +43,43 @@ header img {
   max-width: 200px;
   width: 100%;
   height: auto;
-  margin: auto;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Ícones fixos na direita */
+.left-content {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+/* Container fixo pra direita */
 .social-fixed {
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
 }
+
+/* Certifique que o header tem relative para o position funcionar */
+header {
+  position: relative;
+  text-align: center;
+}
+
 
 .social-links {
   display: flex;
@@ -72,7 +101,20 @@ header img {
   color: #f08205;
 }
 
-/* Menu de navegação */
+/* Responsivo: empilha no mobile */
+@media (max-width: 700px) {
+  .header-flex {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .right-content {
+    align-items: center;
+    margin-bottom: 15px;
+  }
+}
+
+
 nav {
   background-color: #333;
   padding: 10px;
@@ -87,7 +129,7 @@ nav ul {
   justify-content: center;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* permite quebrar em telas pequenas */
 }
 
 nav li {
@@ -107,33 +149,58 @@ nav a:hover {
   color: rgb(240, 130, 5);
 }
 
-/* Seções */
+/* Seções Gerais */
 section {
-  background-color: #2d2d2d;
+  background-color: #2d2d2d; /* Tom mais claro que o fundo */
   padding: 30px;
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-height: 700px;
-  color: #ffffff;
+  min-height: 700px; /* mudou de height fixo para min-height */
+  color: #ffffff; /* Texto branco */
 }
 
-#sobre, #habilidades {
+/* Sobre */
+#sobre {
   background-color: #2d2d2d;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#sobre h2, #habilidades h2 {
+#sobre h2 {
   font-size: 1.8em;
   margin-bottom: 15px;
   color: #ffffff;
 }
 
-#sobre p, #habilidades p {
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#sobre p {
   font-size: 1.1em;
   line-height: 1.6;
   color: #ffffff;
   margin-bottom: 15px;
+}
+
+/* Habilidades */
+#habilidades {
+  background-color: #2d2d2d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#habilidades h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+#habilidades p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
 #habilidades ul {
@@ -147,27 +214,33 @@ section {
   color: #ffffff;
 }
 
+#habilidades li strong {
+  color: #ffffff;
+}
+
 .projetos h1 {
   color: #ffffff;
 }
 
-/* Projetos */
+/* Container principal */
 .projetos-container {
   max-width: 700px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
+/* Lista de projetos */
 .lista-projetos {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: wrap; /* permite quebrar em telas pequenas */
+  justify-content: center; /* centraliza quando quebra linha */
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Cada projeto */
 .projeto {
   max-width: 300px;
   width: 100%;
@@ -176,6 +249,7 @@ section {
   color: #ffffff;
 }
 
+/* Imagens responsivas */
 .projeto img {
   max-width: 100%;
   height: auto;
@@ -184,17 +258,18 @@ section {
   transition: transform 0.3s ease;
 }
 
+/* Efeito hover */
 .projeto:hover img {
   transform: scale(1.05);
 }
 
+/* Legenda */
 .projeto figcaption {
   margin-top: 10px;
   font-weight: bold;
   color: #ffffff;
 }
 
-/* Descrição de projeto */
 .project-description {
   display: block;
   max-width: 600px;
@@ -226,7 +301,7 @@ section {
   color: #ffffff;
 }
 
-/* Aside */
+/* Estilo para o <aside> - Informações Extras */
 aside {
   background-color: #2d2d2d;
   color: #ffffff;
@@ -271,6 +346,21 @@ aside ul li a:hover {
   text-decoration: underline;
 }
 
+/* Responsivo */
+@media (max-width: 600px) {
+  aside {
+    padding: 15px;
+  }
+
+  aside h2 {
+    font-size: 1.3em;
+  }
+
+  aside ul li {
+    font-size: 1em;
+  }
+}
+
 /* Rodapé */
 footer {
   text-align: center;
@@ -281,7 +371,6 @@ footer {
   margin-top: 30px;
 }
 
-/* Imagens e links gerais */
 a {
   color: #4a90e2;
   text-decoration: none;
@@ -292,42 +381,25 @@ a:hover {
   color: #6ba8f0;
 }
 
+/* Imagens gerais */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Responsividade */
-@media (max-width: 700px) {
-  .social-fixed {
-    position: static;
-    transform: none;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .social-links {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  header img {
-    max-width: 120px;
-  }
-
-  section {
+/* Media Queries para responsividade */
+@media (max-width: 900px) {
+  body {
     padding: 15px;
-    min-height: auto;
+  }
+  .projetos-container {
+    max-width: 100%;
+    padding: 0 10px;
   }
 }
 
 @media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-
   nav ul {
     flex-direction: column;
     gap: 10px;
@@ -342,15 +414,18 @@ img {
     max-width: 90%;
   }
 
-  aside {
+  header img {
+    max-width: 120px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  section {
     padding: 15px;
-  }
-
-  aside h2 {
-    font-size: 1.3em;
-  }
-
-  aside ul li {
-    font-size: 1em;
+    min-height: auto; /* deixa altura automática em telas pequenas */
   }
 }
+
+
