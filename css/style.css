@@ -394,7 +394,11 @@ img {
   justify-content: right;
   padding: 15px;
   transition: background 0.2s;
-  border-radius: 75%;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 80px;
   color: white;
   background: #333;
 }
