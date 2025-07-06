@@ -1,3 +1,4 @@
+/* Reset e estrutura geral */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,76 +44,6 @@ header img {
   width: 100%;
   height: auto;
 }
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.left-content {
-  flex: 1;
-  min-width: 280px;
-  text-align: center;
-}
-
-/* Container fixo pra direita */
-.social-fixed {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-}
-
-/* Certifique que o header tem relative para o position funcionar */
-header {
-  position: relative;
-  text-align: center;
-}
-
-
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.social-links li a {
-  color: white;
-  font-size: 2rem;
-  transition: color 0.3s ease;
-  text-decoration: none;
-}
-
-.social-links li a:hover {
-  color: #f08205;
-}
-
-/* Responsivo: empilha no mobile */
-@media (max-width: 700px) {
-  .header-flex {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .right-content {
-    align-items: center;
-    margin-bottom: 15px;
-  }
-}
-
 
 nav {
   background-color: #333;
@@ -425,4 +356,26 @@ img {
     padding: 15px;
     min-height: auto; /* deixa altura automática em telas pequenas */
   }
+}
+
+
+
+#social-links {
+  display: flex;
+  padding: 24px 0px;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50px;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
 }
