@@ -388,3 +388,19 @@ img {
     justify-content: right;
 
 }
+
+.voltar a {
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  padding: 10px;
+  transition: background 0.2s;
+  border-radius: 50%;
+  color: white;
+  background: #333;
+}
+
+.voltar a:hover {
+  background: #f08205; /* Cor laranja similar ao hover dos links do menu */
+  transform: scale(1.1);
+}
