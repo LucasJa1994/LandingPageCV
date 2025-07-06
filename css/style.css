@@ -331,7 +331,7 @@ img {
 
 @media (max-width: 600px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
   }
 
