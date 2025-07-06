@@ -394,7 +394,6 @@ img {
   justify-content: right;
   padding: 10px;
   transition: background 0.2s;
-  border-radius: 75%;
   color: white;
   background: #333;
 }
