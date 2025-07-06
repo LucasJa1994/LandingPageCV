@@ -1,4 +1,3 @@
-/* Reset e estrutura geral */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -427,5 +426,3 @@ img {
     min-height: auto; /* deixa altura automática em telas pequenas */
   }
 }
-
-
